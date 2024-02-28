@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStaticSiteGenerator", "SimpleStaticSiteGenerator\SimpleStaticSiteGenerator.csproj", "{189F5125-F56B-4A38-98CA-A658A2AE8E74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{189F5125-F56B-4A38-98CA-A658A2AE8E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189F5125-F56B-4A38-98CA-A658A2AE8E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189F5125-F56B-4A38-98CA-A658A2AE8E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189F5125-F56B-4A38-98CA-A658A2AE8E74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

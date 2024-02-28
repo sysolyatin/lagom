@@ -10,6 +10,7 @@
 
     <ItemGroup>
       <PackageReference Include="CommandLineParser" Version="2.9.1" />
+      <PackageReference Include="FluentFTP" Version="49.0.2" />
       <PackageReference Include="Markdig" Version="0.34.0" />
     </ItemGroup>
 

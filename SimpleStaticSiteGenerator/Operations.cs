@@ -1,5 +1,6 @@
 using CommandLine;
 using CommandLine.Text;
+using FluentFTP;
 
 namespace SimpleStaticSiteGenerator;
 
@@ -59,7 +60,19 @@ public static class Operations
 
     public static void DeploySite(DeployOptions options)
     {
-        Console.WriteLine(options.FtpServer);
+        const string buildDir = "_site";
+        if (!Directory.Exists(buildDir))
+        {
+            Utils.ShowMessage("Build directory not found", ConsoleColor.Red);
+            return;
+        }
+        
+        using var ftp = new FtpClient(options.FtpServer, options.FtpUser, options.FtpPassword, options.FtpPort);
+        ftp.Connect();
+        ftp.EmptyDirectory($"/{options.FtpFolder}/");
+        ftp.UploadDirectory(buildDir, $"/{options.FtpFolder}/");
+        
+        Utils.ShowMessage("Site successfully uploaded to server", ConsoleColor.Green);
     }
     
     public static void DisplayHelp<T>(ParserResult<T> result, IEnumerable<Error> errs)
