@@ -8,7 +8,7 @@ public static class Operations
 {
     public static void BuildSite(BuildOptions options)
     {
-        Console.WriteLine(options.RssHostName);
+        Console.WriteLine(options.BaseUrl);
         const string tplFileName = "template.html";
         const string siteDir = "_site";
         const string pagesDir = "pages";
@@ -53,7 +53,7 @@ public static class Operations
             .ForEach(htmlPageCreator.CreatePage);
     
         htmlPageCreator.CreateCategoryPages();
-        htmlPageCreator.CreateRssFeed(options.RssSiteTitle, options.RssSiteSubTitle);
+        htmlPageCreator.CreateRssFeed(options.SiteTitle, options.SiteSubTitle);
     
         Utils.ShowMessage("Site successfully created", ConsoleColor.Green);
     }

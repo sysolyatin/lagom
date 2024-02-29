@@ -20,13 +20,13 @@ public class HtmlPageCreator
         _tpl = File.ReadAllText(tplPath);
         _siteDir = siteDir;
         _categoriesInfo = categoriesInfo;
-        _siteBaseUrl = buildOptions.RssHostName;
+        _siteBaseUrl = buildOptions.BaseUrl;
         if (!string.IsNullOrEmpty(_siteBaseUrl) && _siteBaseUrl.Length > 1 && _siteBaseUrl.Last() != '/')
         {
             _siteBaseUrl += "/";
         }
-        _siteTitle = buildOptions.RssSiteTitle;
-        _siteSubTitle = buildOptions.RssSiteSubTitle;
+        _siteTitle = buildOptions.SiteTitle;
+        _siteSubTitle = buildOptions.SiteSubTitle;
         
         _categoryDictionary = new Dictionary<string, List<Page>>();
         _mdPipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();

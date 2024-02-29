@@ -4,15 +4,15 @@ namespace LagomCms;
 
 [Verb("build", HelpText = "Build Static Site")]
 public class BuildOptions {
-    [Option('h',"rssHostName", Required = false, HelpText = "Host name for use in RSS feed, " +
+    [Option('u',"baseUrl", Required = false, HelpText = "Base url for site, " +
                                                             "(ex. https://site.com/)")]
-    public string RssHostName { get; set; }
+    public string BaseUrl { get; set; }
     
-    [Option('t',"title", Required = false, HelpText = "Site title for RSS feed")]
-    public string RssSiteTitle { get; set; }
+    [Option('t',"title", Required = false, HelpText = "Site title")]
+    public string SiteTitle { get; set; }
     
-    [Option('d',"subtitle", Required = false, HelpText = "Site subtitle for RSS feed")]
-    public string RssSiteSubTitle { get; set; }
+    [Option('d',"subtitle", Required = false, HelpText = "Site subtitle")]
+    public string SiteSubTitle { get; set; }
 }
 
 [Verb("deploy", HelpText = "Deploy site to FTP")]
