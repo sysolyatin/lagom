@@ -1,15 +1,8 @@
 ﻿using CommandLine;
 using LagomCms;
 
-Utils.ShowMessage("                  ,,__");
-Utils.ShowMessage("        ..  ..   / o._)                   .---.");
-Utils.ShowMessage(@"       /--'/--\  \-'||        .----.    .'     '.");
-Utils.ShowMessage(@"      /        \_/ / |      .'      '..'         '-.");
-Utils.ShowMessage(@"    .'\  \__\  __.'.'     .' ");
-Utils.ShowMessage(@"      )\ |  )\ |      _.'SIMPLE STATIC SITE GENERATOR");
-Utils.ShowMessage(@"     // \\ // \\");
-Utils.ShowMessage(@"    ||_  \\|_  \\_");
-Utils.ShowMessage("    '--' '--'' '--'");
+Utils.ShowMessage("LagomCMS");
+Utils.ShowMessage("https://github.com/sysolyatin/lagom");
 
 try
 {
