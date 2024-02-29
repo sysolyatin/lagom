@@ -1,5 +1,5 @@
 ﻿using CommandLine;
-using SimpleStaticSiteGenerator;
+using LagomCms;
 
 Utils.ShowMessage("                  ,,__");
 Utils.ShowMessage("        ..  ..   / o._)                   .---.");

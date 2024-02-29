@@ -1,4 +1,4 @@
-namespace SimpleStaticSiteGenerator;
+namespace LagomCms;
 
 public static class Utils
 {

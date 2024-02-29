@@ -1,4 +1,4 @@
-namespace SimpleStaticSiteGenerator;
+namespace LagomCms;
 
 public class Page
 {
@@ -14,6 +14,7 @@ public class Page
         : IsPost
             ? Path.Combine(Category, PageUrl, "index.html")
             : Path.Combine(PageUrl, "index.html");
+    public string RelativeLinkPrefix => PageUrl == "index" ? "" : IsPost ? "../../" : "../";
 
     public Page(string filePath)
     {
@@ -30,7 +31,7 @@ public class Page
             IsPost = true;
             Date = date.ToString("yyyy-MM-dd");
             PageUrl = PageUrl[11..];
-            fileContent = fileContent.Replace("(../static/", "(../../static/");
+            fileContent = fileContent.Replace("(../static/", $"({RelativeLinkPrefix}static/");
         }
         
         Title = PageUrl;

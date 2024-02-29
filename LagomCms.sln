@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleStaticSiteGenerator", "SimpleStaticSiteGenerator\SimpleStaticSiteGenerator.csproj", "{189F5125-F56B-4A38-98CA-A658A2AE8E74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LagomCms", "LagomCms.csproj", "{189F5125-F56B-4A38-98CA-A658A2AE8E74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

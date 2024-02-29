@@ -2,7 +2,7 @@ using CommandLine;
 using CommandLine.Text;
 using FluentFTP;
 
-namespace SimpleStaticSiteGenerator;
+namespace LagomCms;
 
 public static class Operations
 {
@@ -44,7 +44,7 @@ public static class Operations
             .Select(CategoryInfo.CreateFromFile)
             .ToList();
         
-        var htmlPageCreator = new HtmlPageCreator(tplFileName, siteDir, categoriesInfo, options.RssHostName);
+        var htmlPageCreator = new HtmlPageCreator(tplFileName, siteDir, categoriesInfo, options);
 
         Directory.GetFiles(pagesDir)
             .Where(Utils.IsSourcePage)

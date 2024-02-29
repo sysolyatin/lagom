@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}} <> {{site_title}}</title>
+    <link rel="stylesheet" href="{{relative_link_prefix}}static/site.css?v={{timestamp}}">
+</head>
+<body>
+<header>
+    <h1>{{site_title}}</h1>
+    <p>{{site_subtitle}}</p>
+
+    <nav>
+        <ul>
+            <li><a href="{{relative_link_prefix}}">Home</a></li>
+            <li><a href="{{relative_link_prefix}}notes">Notes</a></li>
+            <li><a href="{{relative_link_prefix}}news">News</a></li>
+            <li><a href="{{relative_link_prefix}}about">About</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <article>
+        <header>
+            <p>{{page_date}}</p>
+            <h1>{{page_title}}</h1>
+        </header>
+        <section>
+            {{page_content}}
+        </section>
+    </article>
+</main>
+<footer>
+    <p>
+        Powered by <a href="https://github.com/sysolyatin/lagom">LagomCMS</a><br>
+        Last build {{last_build}}
+    </p>
+    <p>&copy {{year}}, {{site_title}}</p>
+</footer>
+</body>
+</html>

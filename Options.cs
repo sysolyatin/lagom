@@ -1,6 +1,6 @@
 using CommandLine;
 
-namespace SimpleStaticSiteGenerator;
+namespace LagomCms;
 
 [Verb("build", HelpText = "Build Static Site")]
 public class BuildOptions {

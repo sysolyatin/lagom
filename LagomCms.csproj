@@ -5,7 +5,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AssemblyVersion>0.1</AssemblyVersion>
+        <AssemblyVersion>0.1.0</AssemblyVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,7 +15,20 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Update="static\image.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="static\site.css">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="ExampleSiteContent\**" />
       <None Update="template.html">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="categories\news.md">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="categories\notes.md">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="pages\2023-08-11-first-article.md">
@@ -36,15 +49,14 @@
       <None Update="pages\index.md">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="static\image.png">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="categories\news.md">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="categories\notes.md">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ExampleSiteContent\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ExampleSiteContent\**" />
     </ItemGroup>
 
 </Project>
